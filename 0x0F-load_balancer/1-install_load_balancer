@@ -9,6 +9,7 @@ sudo echo "frontend http_front
         bind *:80
         stats uri /haproxy?stats
         default_backend http_back
+
 backend http_back
         balance roundrobin
         server 36572-web-01 3.238.94.60:80 check
